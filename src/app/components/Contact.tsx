@@ -1,21 +1,36 @@
+// 'use client';
+
 import React from 'react';
-import SectionHeader from './commons/SectionHeader';
+import TitleHeader from './commons/TitleHeader';
 
 export default function Contacts() {
   return (
     <section id='skills' className='py-20'>
-      <div className='custom-container mx-auto px-4'>
-        <SectionHeader
-          title={
-            <>
-              Let&apos;s{' '}
-              <span className='text-primary-300'>Build Something </span>Great
-            </>
-          }
-          description='These are real projects where I implemented frontend interfaces with precision and attention to detail.'
-        />
+      <div className='custom-container mx-auto'>
+        <div className='flex gap-10 '>
+          <div className='border'>
+            <TitleHeader
+              title={
+                <>
+                  Let&apos;s{' '}
+                  <span className='text-primary-300'>Build Something </span>
+                  Great
+                </>
+              }
+              description='Got an idea, a project, or just want to connect? I’m always open to new conversations.'
+              align='left'
+            />
+          </div>
+          <div className=' border'>
+            <h3>Adresss</h3>
+            <p>Jakarta, Indonesia</p>
+            <h3>Contact</h3>
+            <p>(+62) 123456789</p>
 
-        {/* Content Skills */}
+            <h3>Social Media</h3>
+            <h3>GET IN TOUCH</h3>
+          </div>
+        </div>
       </div>
     </section>
   );

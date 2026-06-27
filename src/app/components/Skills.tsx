@@ -2,11 +2,9 @@
 
 import { Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button'; // Adjust path to your Shadcn setup
-// import Image from 'next/image';
 import { MOCK_TOOLS } from '../constants/skills';
-// import { SkillCard } from './partials/SkillCard';
 import SkillCard from './partials/SkillCard';
-import SectionHeader from './commons/SectionHeader';
+import TitleHeader from './commons/TitleHeader';
 import { advantages } from '@/app/constants/comparison';
 import ComparisonTable from './partials/ComparisonCard';
 
@@ -26,7 +24,6 @@ export default function TechStackSection() {
             </p>
           </div>
 
-          {/* Locked baseline Shadcn UI action trigger button */}
           <Button className='w-full h-auto py-4 px-6 font-semibold text-sm rounded-none text-white bg-primary-300 hover:bg-primary-400 active:scale-[0.99] transition-all tracking-wide cursor-pointer flex items-center justify-center gap-2'>
             <Mail className='w-4 h-4' strokeWidth={2} />
             Send Message
@@ -34,14 +31,6 @@ export default function TechStackSection() {
         </div>
 
         <div className='lg:col-span-6 relative w-full md:pl-8 '>
-          {/* WHITE ACCENT VERTICAL TIMELINE LINE: Placed strictly on the left border wall */}
-          {/* <div className='absolute left-0 top-0 w-0.5 h-30 bg-white opacity-90 rounded-full z-10' /> */}
-
-          {/* 
-            🌟 SCROLL CONTAINER SHELL: 
-            Locks maximum height parameter to match your 125 (500px) left panel box
-            and provides a highly custom styled scrollbar via custom tailwind setup.
-          */}
           <div
             className='flex flex-col w-full max-h-125 overflow-y-auto pl-4 scroll-smooth
                        [&::-webkit-scrollbar]:w-1.5
@@ -70,7 +59,7 @@ export default function TechStackSection() {
         <div className='absolute bottom-0 left-0 h-125 w-125 rounded-full bg-cyan-500/20 blur-[120px]' />
 
         <div className='relative z-10 custom-container'>
-          <SectionHeader
+          <TitleHeader
             title={
               <>
                 Not Your Typical{' '}

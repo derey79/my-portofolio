@@ -3,3 +3,10 @@ export interface Skill {
   iconPath: string;
   percentage: number;
 }
+
+export interface Project {
+  title: string;
+  year: string;
+  image: string;
+  slug: string;
+}

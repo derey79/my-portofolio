@@ -1,20 +1,26 @@
-import SectionHeader from './commons/SectionHeader';
+'use client';
+
+import TitleHeader from './commons/TitleHeader';
+import ProjectsGrid from './project/ProjectGrid';
+import { PROJECTS } from '../constants/projectlist';
 
 export default function Project() {
   return (
-    <section id='skills' className='py-20'>
+    <section id='projects' className='py-20'>
       <div className='custom-container mx-auto px-4'>
-        <SectionHeader
+        <TitleHeader
           title={
             <>
-              Let&apos;s Build{' '}
-              <span className='text-primary-300'>Something Great</span>
+              Bridging Design and{' '}
+              <span className='text-primary-300'>Development</span>
             </>
           }
           description='These are real projects where I implemented frontend interfaces with precision and attention to detail.'
         />
-
-        {/* Content Skills */}
+        <div className='relative h-auto'>
+          {/* Content Skills */}
+          <ProjectsGrid projects={PROJECTS} />
+        </div>
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ interface SectionHeaderProps {
   align?: 'left' | 'center';
 }
 
-export default function SectionHeader({
+export default function TitleHeader({
   title,
   description,
   align = 'center',
@@ -15,7 +15,7 @@ export default function SectionHeader({
     <div
       className={`mb-12 ${align === 'center' ? 'text-center' : 'text-left'}`}
     >
-      <h2 className='section-title'>{title}</h2>
+      <h2 className='section-title pb-4'>{title}</h2>
 
       <p className='section-description'>{description}</p>
     </div>
