@@ -88,7 +88,6 @@ export const Navbar = () => {
             aria-label='Toggle Menu'
             className='flex md:hidden relative w-10 h-10 rounded-full hover:bg-white/5 transition-all z-60 border-none'
           >
-            {/* Ikon Hamburger (Muncul saat menu tertutup) */}
             <div
               className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${
                 isOpen
@@ -97,15 +96,14 @@ export const Navbar = () => {
               }`}
             >
               <Image
-                src='/icons/hamburger.png' // Sesuaikan lokasi folder aset Anda jika berbeda
+                src='/icons/hamburger.png'
                 alt='Open Menu'
                 width={20}
                 height={20}
-                className='object-contain inverted' // Tambahkan inverted jika gambar aslinya hitam agar menjadi putih
+                className='object-contain inverted'
               />
             </div>
 
-            {/* Ikon X-Close (Muncul saat menu terbuka) */}
             <div
               className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${
                 isOpen
@@ -114,7 +112,7 @@ export const Navbar = () => {
               }`}
             >
               <Image
-                src='/icons/x-close.png' // Sesuaikan lokasi folder aset Anda jika berbeda
+                src='/icons/x-close.png'
                 alt='Close Menu'
                 width={20}
                 height={20}
@@ -126,13 +124,13 @@ export const Navbar = () => {
       </nav>
 
       <div
-        className={`fixed inset-0 z-40 bg-neutral-950/80 backdrop-blur-2xl flex flex-col items-center justify-center gap-6 transition-all duration-500 md:hidden ${
+        className={`fixed inset-0 z-40 bg-neutral-950/40 backdrop-blur-xl flex flex-col items-center justify-center gap-6 transition-all duration-500 md:hidden ${
           isOpen
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
         }`}
       >
-        <div className='flex flex-col items-center gap-6 w-full px-8'>
+        <div className='flex flex-col items-center gap-6 w-full px-4 pt-3'>
           {navigationData.map((item) => {
             const isActive = pathname === item.href;
 
@@ -141,7 +139,7 @@ export const Navbar = () => {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className={`text-sm font-medium tracking-wide transition-all duration-300 py-3 px-6 rounded-full w-full text-center ${
+                className={`text-sm font-medium tracking-wide transition-all duration-300 py-3 px-6 rounded-full w-full text-left ${
                   isActive
                     ? 'bg-white/10 text-primary-300 font-bold scale-105'
                     : 'text-neutral-400 hover:text-white'
