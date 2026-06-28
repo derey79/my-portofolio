@@ -17,7 +17,8 @@ export default function TitleHeader({
     >
       <h2 className='section-title pb-4'>{title}</h2>
 
-      <p className='section-description'>{description}</p>
+      {/* <p className='section-description'>{description}</p> */}
+      <div className='section-description'>{description}</div>
     </div>
   );
 }

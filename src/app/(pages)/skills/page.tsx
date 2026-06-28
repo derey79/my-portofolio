@@ -1,4 +1,4 @@
-// 'use client';
+'use client';
 // src/app/skills/page.tsx
 import Skills from '@/app/components/Skills';
 
